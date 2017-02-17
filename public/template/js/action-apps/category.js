@@ -1,0 +1,1 @@
+function delCategory(id_category) {	$.ajax({		type: "POST",		url: url_del_category,		data: {id_category: id_category, access_token: access_token},		dataType: 'json',		success: function (result) {			if(result.status == false)				alert(result.message);			$('.category_'+id_category).remove();		}	});}
